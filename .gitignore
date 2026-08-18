@@ -56,10 +56,6 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 
-
-# github
-.github/
-
 # visual studio code
 .vs/
 
