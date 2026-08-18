@@ -55,3 +55,16 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+
+# github
+.github/
+
+# visual studio code
+.vs/
+
+# User-specific files
+*.csproj.user
+*.user
+*.userosscache
+*.sln.docstates
