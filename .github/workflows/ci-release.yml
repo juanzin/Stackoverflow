@@ -1,0 +1,36 @@
+name: .NET Web API CI
+
+on:
+  push:
+    branches:
+      - release
+  pull_request:
+    branches:
+      - release
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout repository code
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # Step 2: Set up .NET SDK environment
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x' # Adjust to your target version (e.g., '9.0.x')
+
+    # Step 3: Restore NuGet dependencies
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # Step 4: Build project in Release configuration without restoring again
+    - name: Build project
+      run: dotnet build --configuration Release --no-restore
+
+    # Step 5: Run unit tests with detailed logging
+    - name: Run unit tests
+      run: dotnet test --configuration Release --no-build --verbosity normal
