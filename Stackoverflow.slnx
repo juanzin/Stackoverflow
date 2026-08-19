@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../UnitTests/UnitTests.csproj" Id="73d885e1-ac8f-4f6b-993f-6e132d621837" />
   <Project Path="Stackoverflow.csproj" />
 </Solution>
