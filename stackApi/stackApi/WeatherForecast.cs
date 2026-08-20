@@ -1,4 +1,4 @@
-namespace Stackoverflow
+namespace stackApi
 {
     public class WeatherForecast
     {
