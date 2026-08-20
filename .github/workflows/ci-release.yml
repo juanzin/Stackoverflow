@@ -33,4 +33,4 @@ jobs:
 
     # Step 5: Run unit tests with detailed logging
     - name: Run unit tests
-      run: dotnet test stackApi/Tests/Stackoverflow.Tests.csproj --configuration Release --no-build --verbosity normal
+      run: dotnet test stackApi/Tests/Tests.csproj --configuration Release --no-build --verbosity normal
