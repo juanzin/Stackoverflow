@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Stackoverflow.Controllers
+namespace stackApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

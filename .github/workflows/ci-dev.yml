@@ -25,7 +25,7 @@ jobs:
 
     # Step 3: Restore NuGet dependencies
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore stackApi/stackApi.slnx
 
     # Step 4: Build project in Release configuration without restoring again
     - name: Build project
@@ -33,4 +33,4 @@ jobs:
 
     # Step 5: Run unit tests with detailed logging
     - name: Run unit tests
-      run: dotnet test --configuration Release --no-build --verbosity normal
+      run: stackApi/Tests/Stackoverflow.Tests.csproj --configuration Release --no-build --verbosity normal
